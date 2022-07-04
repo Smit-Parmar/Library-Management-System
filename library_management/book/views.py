@@ -1,11 +1,13 @@
 from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticated
 from rest_framework import status, viewsets
 from .models import Book
 from .serializers import BookSerializer
+from .permissions import IsAuthenticatedOrReadOnly
 # Create your views here.
 
 class BookViewSet(viewsets.ModelViewSet):
-    # permission_classes = [IsAuthenticated,IsOwnerOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     # filterset_class = MovieFilter
     queryset=Book.objects.all()
     serializer_class = BookSerializer
