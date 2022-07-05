@@ -8,6 +8,7 @@ class Book(models.Model):
     description = models.CharField(max_length=300,default="")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='book_photos', max_length=254)
 
     class Meta:
         ordering = ['-id']

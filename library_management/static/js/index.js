@@ -37,9 +37,9 @@ function loadBooks() {
                     let sBookDetails = `<article>
                     <div class="single-book-box">
                         <div class="post-thumbnail">
-                            <div class="book-list-icon yellow-icon"></div>
-                            <a href="books-media-detail-v1.html"><img alt="Book"
-                                    src='static/images/books-media/list-view/book-media-01.jpg' /></a>
+                            <div class="book-list-icon "></div>
+                            <a href="#"><img alt="Book"
+                                    src=${oBook.image} /></a>
                         </div>
                         <div class="post-detail">
                             
@@ -47,7 +47,7 @@ function loadBooks() {
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <h3 class="entry-title">
-                                            <a href="books-media-detail-v1.html"> ${oBook.title} </a>
+                                            <a href="#"> ${oBook.title} </a>
                                         </h3>
                                         <ul>
                                             <li><strong>Author:</strong> ${oBook.author}</li>
@@ -64,9 +64,10 @@ function loadBooks() {
                                 <p>${oBook.description}</p>
                             </div>
                             <footer class="entry-footer">
-                                <a class="btn btn-dark-gray" href="books-media-detail-v1.html">Edit</a>
-                                <a class="btn btn-dark-gray" href="books-media-detail-v1.html">Update</a>
-                                <a class="btn btn-dark-gray" href="books-media-detail-v1.html">Delete</a>
+                                <a class="btn btn-dark-gray" href="#">Update</a>
+                                <input type="button"  value="Delete" class="btn "
+                                                id="btn-delete">
+                                <a class="btn btn-dark-gray" value=${oBook.id} id="delete" href="#">Delete</a>
                             </footer>
                         </div>
                         <div class="clear"></div>
@@ -77,9 +78,9 @@ function loadBooks() {
                     let sBookDetails = `<article>
                     <div class="single-book-box">
                         <div class="post-thumbnail">
-                            <div class="book-list-icon yellow-icon"></div>
-                            <a href="books-media-detail-v1.html"><img alt="Book"
-                                    src='static/images/books-media/list-view/book-media-01.jpg' /></a>
+                            
+                            <a href="#"><img alt="Book"
+                                    src=${oBook.image} /></a>
                         </div>
                         <div class="post-detail">
                             
@@ -87,7 +88,7 @@ function loadBooks() {
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <h3 class="entry-title">
-                                            <a href="books-media-detail-v1.html"> ${oBook.title} </a>
+                                            <a href="#"> ${oBook.title} </a>
                                         </h3>
                                         <ul>
                                             <li><strong>Author:</strong> ${oBook.author}</li>
