@@ -39,7 +39,7 @@ function loginUser() {
         },
         dataType: 'json',
         success: function (result, status, xhr) {
-            alert("User Logged In Successfully");
+            alert("Admin Logged In Successfully");
             console.log(result);
             console.log(status);
             console.log(xhr);
@@ -56,19 +56,5 @@ function loginUser() {
             alert(xhr.responseJSON.detail);
         }
     })
-    // $.ajax({
-    //     type: "GET",
-    //     url: "http://127.0.0.1:8000/api/v1/book/",
-    //     success: function (result, status, xhr) {
-    //         console.log(result);
-    //         console.log(status);
-    //         console.log(xhr);
-    //     },
-    //     error: function (xhr, status, error) {
-    //         console.log(xhr);
-    //         console.log(status);
-    //         console.log(error);
-    //     }
-    // })
 
 }

@@ -299,6 +299,8 @@
                                                     </div>
                                                     <!-- Signup Code -->
                                                     <form class="login" method="post">
+                                                        <!-- {% csrf_token %} -->
+                                                        {% csrf_token %}
                                                         <p class="form-row form-row-first input-required">
 
                                                             <input type="text" placeholder="Email" id="email1"
@@ -315,8 +317,8 @@
                                                                 id="password2" name="password" class="input-text">
                                                         </p>
                                                         <div class="clear"></div>
-                                                        <input type="submit" value="Signup" name="signup"
-                                                            class="button btn btn-default">
+                                                        <input type="button" value="Signup" name="signup"
+                                                            class="button btn btn-default" id="btn-signup">
                                                         <div class="clear"></div>
                                                     </form>
                                                 </div>
@@ -553,6 +555,7 @@
 
     <!-- TODO: Link signin.js file here -->
     <script type="text/javascript" src="{% static 'js/signin.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
 </body>
 
 
