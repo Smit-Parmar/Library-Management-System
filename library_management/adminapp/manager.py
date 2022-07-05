@@ -12,7 +12,6 @@ class AdminManager(BaseUserManager):
         admin = self.model(
             email=self.normalize_email(email),
         )
-
         admin.set_password(password)
         admin.admin = True #Here our entity is also admin
         admin.is_staff = True

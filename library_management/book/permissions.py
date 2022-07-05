@@ -19,15 +19,18 @@ from rest_framework.exceptions import PermissionDenied
 
 SAFE_METHODS = ['GET', 'HEAD', 'OPTIONS']
 
-class IsAuthenticatedOrReadOnly(permissions.BasePermission):
+class IsAdminOrReadOnly(permissions.BasePermission):
     """
-    The request is authenticated as a user, or is a read-only request.
+    Permission to allow read only to user and CRUD to Admin
     """
 
     def has_permission(self, request, view):
-        print(request.user!="AnonymousUser")
+        
         if request.method in SAFE_METHODS:
-            print(request.user!="AnonymousUser")
             return True
-        elif request.user!="AnonymousUser":
+        elif request.user.is_anonymous:
+            return False
+        elif request.user.admin==True:
             return True
+        else:
+            return False
