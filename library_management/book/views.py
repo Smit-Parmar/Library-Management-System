@@ -9,6 +9,9 @@ from .filters import BookFilter
 # Create your views here.
 
 class BookViewSet(viewsets.ModelViewSet):
+    """
+    @params this is test
+    """
     permission_classes = [IsAdminOrReadOnly]
     filterset_class = BookFilter
     pagination_class=CustomPagination
