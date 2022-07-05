@@ -13622,7 +13622,7 @@ a:focus {
 .page-banner::before {
   background: rgba(0, 0, 0, 0.8);
   content: "";
-  height: 100%;
+  height: 45%;
   left: 0;
   position: absolute;
   top: 0;
@@ -18823,7 +18823,7 @@ a:focus {
 #home-v1-header-carousel figure::before {
   background: rgba(0, 0, 0, 0.8);
   content: '';
-  height: 100%;
+  height: 45%;
   position: absolute;
   top: 0;
   width: 100%;
