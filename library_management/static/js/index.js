@@ -29,9 +29,11 @@ function loadBooks() {
             console.log(result);
             console.log(status);
             console.log(xhr);
-            
-            for (let index = 0; index < xhr.responseJSON.length; index++) {
-                const oBook = xhr.responseJSON[index];
+            const response = xhr.responseJSON["results"];
+
+            for (let index = 0; index < response.length; index++) {
+                const oBook = response[index];
+                
                 const token = window.localStorage.getItem("Authorization");
                 if (token) {
                     let sBookDetails = `<article>
@@ -65,9 +67,7 @@ function loadBooks() {
                             </div>
                             <footer class="entry-footer">
                                 <a class="btn btn-dark-gray" href="#">Update</a>
-                                <input type="button"  value="Delete" class="btn "
-                                                id="btn-delete">
-                                <a class="btn btn-dark-gray" value=${oBook.id} id="delete" href="#">Delete</a>
+                                <a class="btn btn-dark-gray" href="#">Delete</a>
                             </footer>
                         </div>
                         <div class="clear"></div>
