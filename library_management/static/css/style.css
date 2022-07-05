@@ -13622,7 +13622,7 @@ a:focus {
 .page-banner::before {
   background: rgba(0, 0, 0, 0.8);
   content: "";
-  height: 45%;
+  height: 60%;
   left: 0;
   position: absolute;
   top: 0;
@@ -14483,7 +14483,7 @@ a:focus {
   font-weight: 700;
 }
 .signin-main .company-info {
-  padding-top: 100px;
+  padding-top: 0px;
 }
 @media (max-width: 767px) {
   .signin-main .company-info {
@@ -18823,7 +18823,7 @@ a:focus {
 #home-v1-header-carousel figure::before {
   background: rgba(0, 0, 0, 0.8);
   content: '';
-  height: 45%;
+  height: 60%;
   position: absolute;
   top: 0;
   width: 100%;
