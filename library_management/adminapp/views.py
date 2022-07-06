@@ -12,7 +12,7 @@ class AdminSignup(generics.GenericAPIView):
     serializer_class = AdminSerializer
 
     def post(self, request, *args, **kwargs):
-        try:
+        try:# To avaid dict _mutable error
             request.data._mutable = True
             request.data["password"]=make_password(request.data["password"]) #It will Hash the password
             request.data._mutable = False

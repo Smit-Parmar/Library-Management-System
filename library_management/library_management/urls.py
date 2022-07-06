@@ -46,7 +46,7 @@ urlpatterns = [
     # django official docs
     path('api/docs/', include_docs_urls(title="Library API's")),
 
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),#Login API
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('admin/', admin.site.urls),
     path('api/v1/',include('book.urls')),
