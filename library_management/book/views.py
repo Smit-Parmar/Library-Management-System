@@ -10,7 +10,7 @@ from .filters import BookFilter
 
 class BookViewSet(viewsets.ModelViewSet):
     """
-    @params this is test
+    API to perform CRUD Operation on BOOK
     """
     permission_classes = [IsAdminOrReadOnly]
     filterset_class = BookFilter
