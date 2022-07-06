@@ -17,3 +17,7 @@ http://127.0.0.1:8000/api/token/
 * add <strong>Authorization</strong> in header of any POST/PUT/DELETE API
 * add Bearer <access token> as a value
 
+## To Add book records
+* To add book we need to use postman instead of swagger UI becase we have to upload book ia\mage
+
+
