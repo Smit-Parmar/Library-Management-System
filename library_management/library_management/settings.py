@@ -27,9 +27,9 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-fpo86s*+rar%c9xdd-!j64q!3q)+u^086ixg@6%+1p_p&6h@lh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -101,23 +101,23 @@ SIMPLE_JWT = {
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': env("DATABASE_NAME"),
-        'USER': env('DATABASE_USER'),
-        'PASSWORD': env('DATABASE_PASS'),
-        'HOST': env('DATABASE_HOST'),   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', 
+#         'NAME': env("DATABASE_NAME"),
+#         'USER': env('DATABASE_USER'),
+#         'PASSWORD': env('DATABASE_PASS'),
+#         'HOST': env('DATABASE_HOST'),   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
@@ -168,9 +168,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static')
-]
+# STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static')
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/static'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 

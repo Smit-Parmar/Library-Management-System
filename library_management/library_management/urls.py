@@ -24,6 +24,8 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from django.views.static import serve 
+from django.urls import re_path as url
 
 from rest_framework.documentation import include_docs_urls
 
@@ -52,6 +54,9 @@ urlpatterns = [
     path('api/v1/',include('book.urls')),
     path('api/admin/',include('adminapp.urls')),
     path('',include('frontapp.urls')),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
